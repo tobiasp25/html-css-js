@@ -1,0 +1,227 @@
+
+@font-face {
+    font-family: 'Amatic';
+    src: url('assets/fonts/Amatic_SC/AmaticSC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Reenie';
+    src: url('assets/fonts/Reenie_Beanie/ReenieBeanie-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'desarts';
+    src: url('assets/fonts/hotel_des_arts_1929/HotelDesArts1929.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Marcellus';
+    src: url('assets/fonts/Marcellus_SC/MarcellusSC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Neon';
+    src: url('assets/fonts/Neonderthaw/Neonderthaw-Regular.ttf') format('WOFF');
+}
+
+@font-face {
+    font-family: 'Shadows';
+    src: url('assets/fonts/Shadows_Into_Light/ShadowsIntoLight-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'OPTI';
+    src: url('assets/fonts/OPTIPauling-Black/OPTIPauling-Black.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'milkyway hotel';
+    src: url('assets/fonts/milkyway_hotel/MilkywayHotel_PersonalUseOnly.ttf') format('truetype');
+}
+
+header{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: column;
+    color: rgb(255, 196, 157);
+}
+
+.HD{
+    font-family: 'Neon', sans-serif;
+    font-size: xx-large;
+    align-self: center;
+    margin-bottom: 3vh;
+    opacity: 0;
+    transform: translateX(-20px); 
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.HD.animate {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
+.sub{
+    font-family: 'Marcellus', sans-serif;
+    font-size: medium;
+    text-align: right;
+    white-space: nowrap;
+    margin-bottom: 2vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    align-self: start;
+}
+
+.sub.animate {
+    opacity: 1;
+}
+
+.inv{
+    font-family: 'Reenie', sans-serif;
+    font-size: small;
+    white-space: nowrap;
+    align-self: flex-start;
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.inv.animate {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100vw;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    background-image: url('assets/images/2d1d306f-b596-4490-84d4-aa5228b10239.png');
+    background-size: cover;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+body.animation{
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+.subtytles{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.cuerpo{
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(20, 20, 20);
+    text-decoration: rgb(255, 217, 171);
+    border-radius: 20px;
+    box-shadow: 1px 2px 25px 5px rgba(255,196,157,0.89);
+    -webkit-box-shadow: 1px 2px 25px 5px rgba(255,196,157,0.89);
+    -moz-box-shadow: 1px 2px 25px 5px rgba(255,196,157,0.89);
+}
+
+label{
+    color: rgb(255, 196, 157);
+    font-family: 'milkyway hotel', sans-serif;
+    margin-bottom: 2%;
+}
+
+input{
+    padding: 5%;
+    margin-bottom: 3vh;
+    border-radius: 15px;
+    border-color:rgb(20, 20, 20);
+    border-style: solid;
+    background-color: rgb(64, 64, 64);
+    transition: box-shadow, border-color, 0.5s;
+    overflow: hidden;
+    z-index: 2;
+}
+
+input::placeholder {
+    color: rgba(163, 95, 50, 0.868); /* Color del texto del marcador de posición */
+    font-style: italic; /* Estilo del texto del marcador de posición */
+}
+
+/*input::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background: rgb(255, 196, 157); 
+    animation: rotate 2s linear infinite; 
+}
+
+@keyframes rotate{
+    from{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
+}
+
+input::after{
+    content: '';
+    position: absolute;
+    background:rgb(64, 64, 64);
+    inset: 10px;
+    border-radius: 15px;
+}
+*/
+input:focus{
+    outline: none;
+    box-shadow: 1px 2px 25px 5px rgba(255,196,157,0.89);
+    -webkit-box-shadow: 1px 2px 25px 5px rgba(255,196,157,0.89);
+    -moz-box-shadow: 1px 2px 25px 5px rgba(255,196,157,0.89);
+    color: rgb(255, 196, 157);
+    border-color: rgb(255, 196, 157);
+}
+
+#sub{
+    background-color: rgb(255, 196, 157);
+    border-radius: 25px;
+    border-color:  rgb(20, 20, 20);
+    padding: 15px;
+    width: 17vw;
+    align-self: center;
+    border-style: solid;
+    transition: background-color, width, 0.5s;
+    font-size: medium;
+}
+#sub:hover{
+    cursor:pointer;
+    background-color: rgb(64, 64, 64);
+    color: rgb(255, 196, 157);
+    width: 22vw;
+    border-color: rgb(255, 196, 157);
+    font-size: x-large;
+}
+
+.inv{
+    align-self: flex-start;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5vh;
+    margin-bottom: 6vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    width: 20vw;
+}
+
